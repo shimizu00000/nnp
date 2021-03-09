@@ -1,0 +1,46 @@
+rc       = 7.0d0
+rn       = 1.0d0
+neighbor = 300
+phi      = tanh # activation_function
+
+dir_data = "../../../step2_data_binary/data"
+dir_sf   = "../../../step3_sf/data_sf/rc_7"
+
+element_a   = Au 1
+node_in_a   = 66  # sum over the sf functions
+num_g2_a_a  = 6
+num_g2_a_b  = 6
+num_g5_a_aa = 18
+num_g5_a_ab = 18
+num_g5_a_bb = 18
+
+element_b   = Li 2
+node_in_b   = 66
+num_g2_b_a  = 6
+num_g2_b_b  = 6
+num_g5_b_aa = 18
+num_g5_b_ab = 18
+num_g5_b_bb = 18
+
+memory = 100
+iprint = 1
+
+# No. of nodes
+nnp_io_a   = 1  # on:1 off:0
+nlayer_a   = 4  # Number of layers including input and output
+node_h1_a  = 10 # Number of nodes
+node_h2_a  = 10
+node_out_a = 1
+
+nnp_io_b   = 1
+nlayer_b   = 4
+node_h1_b  = 10
+node_h2_b  = 10
+node_out_b = 1
+
+percent_tst = 0  # % of test  # 0: not monitor, 1: monitor
+weight_io = 0    # 0: from scrach, 1: from file
+factr = 1.0d+7   # 1.0d+7(def) 1.0d+9(lower accuracy) 1.0d+5(higher accuracy)
+pgtol = 1.0d-3   # 1.0d-5(def) 1.0d-3(lower accuracy) 1.0d-7(higher accuracy)
+alpha = 1.0d0    #energy
+beta  = 0.0d0    #force

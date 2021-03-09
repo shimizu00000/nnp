@@ -1,0 +1,6 @@
+#Create lammps.nnp in training/lammps directory.
+#Execute LAMMPS with the following commands.
+
+pair_style      nnp2v
+pair_coeff      * * lammps.nnp Au Li
+
